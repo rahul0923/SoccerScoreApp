@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rkesavan.soccerscore.MainActivity"
+    android:background="@drawable/footballapp">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/soccerball"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/football"/>
+
+    <TextView
+        android:id="@+id/textViewA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scoreTeamA"
+        android:layout_alignLeft="@+id/textViewB"
+        android:layout_alignStart="@+id/textViewB"
+        android:layout_marginBottom="50dp"
+        android:text="Team A"
+        android:textAllCaps="true"
+        android:textColor="?android:attr/colorForeground"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp"
+        android:text="Team B"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/scoreTeamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/football"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:textSize="56sp"
+        android:fontFamily="sans-serif-light"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/scoreTeamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/football"
+        android:layout_marginTop="48dp"
+        android:textSize="56sp"
+        android:fontFamily="sans-serif-light"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/teamAGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/teamAFoul"
+        android:layout_alignBottom="@+id/teamAFoul"
+        android:layout_alignLeft="@+id/teamBGoal"
+        android:layout_alignStart="@+id/teamBGoal"
+        android:background="@android:color/holo_blue_bright"
+        android:onClick="incrementTeamA"
+        android:text="Goal" />
+
+    <Button
+        android:id="@+id/teamAFoul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/football"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="57dp"
+        android:layout_marginRight="10dp"
+        android:onClick="decrementTeamA"
+        android:background="@android:color/holo_red_dark"
+        android:text="Foul" />
+
+    <Button
+        android:id="@+id/teamBGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/football"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="58dp"
+        android:onClick="incrementTeamB"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Goal" />
+
+    <Button
+        android:id="@+id/teamBFoul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/football"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="58dp"
+        android:onClick="decrementTeamB"
+        android:background="@android:color/holo_red_dark"
+        android:text="Foul" />
+
+</RelativeLayout>
